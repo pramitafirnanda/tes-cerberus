@@ -3,7 +3,7 @@
 @section('content')
 <!-- Page Features -->
 <div>
-  <a href="admin/create" class="btn btn-primary btn-lg">Tambah Data</a>
+  <a href="{{ url('admin/create') }}" class="btn btn-primary btn-lg">Tambah Data</a>
 </div>
 
 <div class="row text-center">
