@@ -11,6 +11,12 @@
 |
 */
 
+Route::get('/', function () {
+	$datas = App\Biodata::all();
+    return view('index', compact('datas'));
+});
+
+
 Route::group(['middleware' => 'web'], function(){
-    Route::resource('/', 'BiodataController');
+    Route::resource('/admin', 'BiodataController');    
 });

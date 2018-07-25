@@ -8,7 +8,12 @@ class BiodataController extends Controller
 {
     public function index(){
         $datas = Biodata::all();
-        return view('home.index', compact('datas'));
+        return view('admin.index', compact('datas'));
+    }
+
+    public function create()
+    {
+    	return view('admin.create');
     }
 
     public function store(Request $request)
@@ -31,7 +36,7 @@ class BiodataController extends Controller
     	$data->email = $request['email'];
     	$data->address = $request['address'];
     	$data->save();      
-    	return redirect()->back();  
+    	return redirect('admin');  
     }
 
     public function update(Request $request, $id)
@@ -42,7 +47,7 @@ class BiodataController extends Controller
     public function show($id)
     {
         $datas = Biodata::find($id);
-        return view('home.index', compact('datas'));
+        return view('admin.index', compact('datas'));
     }
 
     public function destroy($id)

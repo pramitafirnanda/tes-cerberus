@@ -4,7 +4,7 @@
       {!!Form::text('name',null,['id'=>'name','class'=>'form-control','placeholder'=>'Nama Lengkap'])!!}
         @if($errors->has('name'))
             <span class="help-block">
-                <p>{{ $errors->first('name') }}</p>
+                <i>{{ $errors->first('name') }}</i>
             </span>
         @endif
     </div>
@@ -20,7 +20,7 @@
 
         @if($errors->has('jk'))
         <span class="help-block">
-            <p>{{ $errors->first('jk') }}</p>
+            <i>{{ $errors->first('jk') }}</i>
         </span>
         @endif
     </div>
@@ -32,7 +32,7 @@
 
       @if($errors->has('birthdate'))
         <span class="help-block">
-            <p>{{ $errors->first('birthdate') }}</p>
+            <i>{{ $errors->first('birthdate') }}</i>
         </span>
         @endif
     </div>
@@ -43,7 +43,7 @@
       {!!Form::text('phone',null,['id'=>'phone','class'=>'form-control','placeholder'=>'Phone'])!!}
       @if($errors->has('phone'))
         <span class="help-block">
-            <p>{{ $errors->first('phone') }}</p>
+            <i>{{ $errors->first('phone') }}</i>
         </span>
         @endif
     </div>
@@ -55,7 +55,7 @@
       {!!Form::email('email',null,['id'=>'email','class'=>'form-control','placeholder'=>'Email'])!!}
       @if($errors->has('email'))
         <span class="help-block">
-            <p>{{ $errors->first('email') }}</p>
+            <i>{{ $errors->first('email') }}</i>
         </span>
         @endif
     </div>
@@ -67,7 +67,7 @@
       {!!Form::textarea('address',null,['id'=>'address','class'=>'form-control','placeholder'=>'Alamat'])!!}
       @if($errors->has('address'))
         <span class="help-block">
-            <p>{{ $errors->first('address') }}</p>
+            <i>{{ $errors->first('address') }}</i>
         </span>
         @endif
     </div>
